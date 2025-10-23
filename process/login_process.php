@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result->fetch_assoc();
 
         // Verifica a senha criptografada
-        if (password_verify($senha, $user['senha'])) {
+    
+        (password_verify($senha, $user['senha'])) {
             // Senha correta, armazena dados na sessão
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_nome'] = $user['nome'];
